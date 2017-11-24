@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
+gem "paperclip"
 
 gem 'devise-bootstrap-views'
 gem 'bootstrap_form'
