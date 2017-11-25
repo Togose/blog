@@ -16,8 +16,11 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.save
-    redirect_to article_path(@article)
+    if @article.save
+        redirect_to @article
+    else
+        render 'new'
+    end
   end
 
   def destroy
@@ -32,11 +35,19 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    @article.update(article_params)
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
 
     flash.notice = "Artículo '#{@article.titulo}' fue actualizado con exito!"
 
-    redirect_to article_path(@article)
   end
+
+  private
+    def article_params
+      params.require(:article).permit(:titulo, :descripcion, :image)
+    end
 
 end

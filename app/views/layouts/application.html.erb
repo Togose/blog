@@ -11,11 +11,9 @@
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
   	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
-  </head>
 
-  <h3><center> BLOG DE TOGOSE </center></h3>
+    <h3><center> BLOG DE TOGOSE </center></h3>
 
-  <body>
     <p class="navbar-text pull-right">
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
@@ -36,6 +34,12 @@
 
     <p class="flash"><%= flash.notice %></p>
 
+  </head>
+
+  <body>
+    <br>
+    <br>
+    <br>
     <%= yield %>
   </body>
 </html>

@@ -1,5 +1,10 @@
 # README
 
+https://www.sitepoint.com/uploading-files-with-paperclip/
+
+https://captainvita.gitbooks.io/blog-with-ror/content/chapter2.html
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

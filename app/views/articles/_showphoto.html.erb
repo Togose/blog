@@ -1,9 +1,5 @@
 <div class="media">
   <div class="media-left">
-    <%= link_to image_tag(@article.image.url, class: 'media-object',
-      :width => 1000, :height => 300), @article.image.url, target: '_blank' %>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading"><%= @article.titulo %></h4>
+    <%= link_to image_tag(@article.image.url(:large), class: 'media-object'), @article.image.url, target: '_blank' %>
   </div>
 </div>
