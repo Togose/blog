@@ -1,7 +1,42 @@
-<h1><%= @article.titulo %></h1>
-<p><%= @article.descripcion %>
-<%= render partial: 'showphoto' %></p>
-<%= link_to "Editar Artículo", edit_article_path(@article) %>
-<p><%= link_to "Borrar Artículo", article_path(@article), method: :delete,
-data: {confirm: "Seguro que quieres borrar este artículo?"}%></p>
-<%= button_to 'Volver', articles_path, :method => "get", class: "btn btn-primary" %>
+
+<div class="panel panel-default" style="width:1200px; margin-top:50px;
+margin-left: auto; margin-right: auto">
+
+  <div class="panel-heading">
+    <h2><%= @article.titulo %></h2>
+  </div>
+
+  <div id ="wrapper_show">
+
+    <div id ="first_show">
+      <div style="text-align: justify; margin: 20px">
+        <%= @article.descripcion %>
+      </div>
+    </div>
+
+    <div class ="media" id ="second_show">
+      <div class = "media-right">
+        <%= link_to image_tag(@article.image.url(:large),
+        class: 'media-object'), article_path(@article), target: '_blank' %>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-left: 20px">
+    <p>
+    <%= button_to "Editar Artículo", edit_article_path(@article),
+    class: "btn btn-primary", :method => "get"%>
+    </p>
+    <p>
+    <%= button_to "Borrar Artículo", article_path(@article),
+      class: "btn btn-primary", method: :delete,
+        data: {confirm: "Seguro que quieres borrar este artículo?"}%>
+    </p>
+    <p>
+    <%= button_to 'Volver', articles_path, :method => "get",
+      class: "btn btn-primary" %>
+    </p>
+  </div>
+
+</div>

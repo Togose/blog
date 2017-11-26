@@ -35,3 +35,40 @@
    text-align: center;
    vertical-align: middle;
  }
+
+#wrapper {
+    width: 1200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 1px ;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#first {
+    width: 800px;
+    float:left; /* add this */
+    border: 20px;
+}
+#second {
+    width: 300px;
+    border:  1px;
+    float:right;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+
+#wrapper_show {
+    width: 1200px;
+    border: 1px ;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#first_show {
+    width: 800px;
+    float:left; /* add this */
+    border: 20px;
+}
+#second_show {
+    width: 350px;
+    border:  1px;
+    margin: 25px;
+    float:right;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
